@@ -85,4 +85,28 @@ body{
 .title{
   font-size: 3rem;
 }
+
+.bg-crimson{
+  background-color: crimson;
+}
+
+.round {
+  border-radius: 0.5rem;
+}
+
+.border{
+  border: 3px solid black;
+}
+
+.padding{
+  padding: 1rem;
+}
+.gap{
+  gap: 1rem;
+}
+
+input {
+  border: none;
+  padding: 0.5rem;
+}
 </style>
