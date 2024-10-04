@@ -62,11 +62,12 @@
 }
 
 #app{
-  font-family: Oswald;
+  /* Pass */
 }
 
 body{
   background-color: var(--background-dark);
+  font-family: Oswald;
 }
 
 .display-flex {
@@ -105,6 +106,9 @@ body{
   gap: 1rem;
 }
 
+.font-bigger {
+  font-size: 3rem;
+}
 input {
   border: none;
   padding: 0.5rem;

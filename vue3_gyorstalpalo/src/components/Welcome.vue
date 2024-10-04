@@ -1,4 +1,16 @@
 <script setup>
+import {ref} from 'vue'
+
+const email = ref('pelda@gmail.com')
+const password = ref('')
+const error = ref('')
+
+const login = () => {
+    if(!email.value || !password.value){
+        error.value = "Toltsd ki mindket mezot!"
+    }
+    console.log(email.value, password.value);
+}
   
 </script>
 
@@ -10,10 +22,11 @@
       <img src="../assets/fat_cat.png" class="logo vue" alt="Vue logo" />
     </div>
 
-    <form class="display-flex flex-column gap">
-        <font-awesome-icon :icon="['fas', 'fist-raised']" />
-        <input class='round' type="email" placeholder="Email" />
-        <input class='round' type = "password" placeholder="Jelszo"/>
+    <form class="display-flex flex-column gap" @submit.prevent="login">
+        <p v-if="error">{{ error }}</p>
+        <font-awesome-icon class="font-bigger" :icon="['fas', 'fist-raised']" />
+        <input class='round' type="email" placeholder="Email" v-model="email" />
+        <input class='round' type = "password" placeholder="Jelszo" v-model="password"/>
         <button>Login</button>
     </form>
   </div>
