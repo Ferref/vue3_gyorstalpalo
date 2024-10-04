@@ -11,6 +11,7 @@
     </div>
 
     <form class="display-flex flex-column gap">
+        <font-awesome-icon :icon="['fas', 'fist-raised']" />
         <input class='round' type="email" placeholder="Email" />
         <input class='round' type = "password" placeholder="Jelszo"/>
         <button>Login</button>
